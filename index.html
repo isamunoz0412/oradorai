@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The future of trusted educational assessment - OradorAI</title>
   <meta name="description" content="Unlock the true depth of learning, Assess with greater precision and align with your academic vision with OradorAI">
-  
+
   <style>
-    /* Estilos Básicos y Limpieza */
+    /* Estilos base y reseteo */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -16,25 +16,25 @@
     }
 
     body {
-      color: #333;
-      background-color: #fff;
+      color: #1f2937;
+      background-color: #ffffff;
       line-height: 1.6;
     }
 
-    /* Ocultar cualquier marca de agua de Solo */
+    /* 3. Ocultar marca de agua Solo */
     .solo-badge, [href*="solo.to"], [href*="solo.build"] {
       display: none !important;
       visibility: hidden !important;
     }
 
-    /* Navegación y Menú Responsivo */
+    /* Navegación y Menú */
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
+      padding: 1.25rem 2rem;
       background: #ffffff;
-      border-bottom: 1px solid #eaeaea;
+      border-bottom: 1px solid #f3f4f6;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -42,79 +42,81 @@
 
     .logo {
       font-size: 1.5rem;
-      font-weight: bold;
-      color: #111;
+      font-weight: 700;
+      color: #111827;
+      text-decoration: none;
     }
 
     .nav-links {
       display: flex;
-      gap: 1.5rem;
+      gap: 2rem;
       list-style: none;
     }
 
     .nav-links a {
       text-decoration: none;
-      color: #555;
+      color: #4b5563;
       font-weight: 500;
       transition: color 0.2s;
     }
 
     .nav-links a:hover {
-      color: #000;
+      color: #111827;
     }
 
-    /* Botón Menú Hamburguesa para Móvil */
     .menu-toggle {
       display: none;
       background: none;
       border: none;
-      font-size: 1.8rem;
+      font-size: 1.75rem;
       cursor: pointer;
-      color: #333;
+      color: #111827;
     }
 
-    /* Secciones */
+    /* Secciones principales */
     .container {
-      max-width: 1000px;
+      max-width: 1024px;
       margin: 0 auto;
-      padding: 3rem 1.5rem;
+      padding: 4rem 1.5rem;
     }
 
     .hero {
       text-align: center;
-      margin-bottom: 3rem;
+      max-width: 768px;
+      margin: 0 auto 4rem auto;
     }
 
     .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #111;
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #111827;
+      margin-bottom: 1.25rem;
     }
 
     .hero p {
-      font-size: 1.2rem;
-      color: #666;
+      font-size: 1.25rem;
+      color: #6b7280;
     }
 
-    /* 2. Video Embebido Responsivo */
+    /* 2. Sección de Video Embebido */
     .video-section {
-      margin: 3rem 0;
+      margin: 4rem 0;
       text-align: center;
     }
 
     .video-container {
       position: relative;
-      padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+      padding-bottom: 56.25%; /* Relación 16:9 */
       height: 0;
       overflow: hidden;
       max-width: 100%;
-      background: #000;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      background: #000000;
+      border-radius: 1rem;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     }
 
-    .video-container iframe,
-    .video-container video {
+    .video-container iframe {
       position: absolute;
       top: 0;
       left: 0;
@@ -123,38 +125,81 @@
       border: 0;
     }
 
-    /* 1. Formulario de Contacto para Netlify */
+    /* Características y Detalles */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 5rem 0;
+    }
+
+    .feature-card {
+      padding: 2rem;
+      background: #f9fafb;
+      border-radius: 0.75rem;
+      border: 1px solid #f3f4f6;
+    }
+
+    .feature-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: #111827;
+    }
+
+    .feature-card p {
+      color: #6b7280;
+    }
+
+    /* 1. Formulario para Netlify */
     .contact-section {
-      background: #f9f9f9;
-      padding: 2.5rem;
-      border-radius: 12px;
+      background: #ffffff;
+      padding: 3rem 2rem;
+      border-radius: 1rem;
       max-width: 600px;
-      margin: 3rem auto;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin: 5rem auto 2rem auto;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
     }
 
     .contact-section h2 {
-      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
       text-align: center;
+      color: #111827;
+    }
+
+    .contact-section p {
+      text-align: center;
+      color: #6b7280;
+      margin-bottom: 2rem;
     }
 
     .form-group {
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.5rem;
     }
 
     .form-group label {
       display: block;
       margin-bottom: 0.5rem;
       font-weight: 500;
+      color: #374151;
     }
 
     .form-group input,
     .form-group textarea {
       width: 100%;
-      padding: 0.8rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      border: 1px solid #d1d5db;
+      border-radius: 0.5rem;
       font-size: 1rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #2563eb;
     }
 
     .form-group textarea {
@@ -164,30 +209,30 @@
 
     button[type="submit"] {
       width: 100%;
-      padding: 0.9rem;
-      background-color: #0066cc;
-      color: white;
+      padding: 0.875rem;
+      background-color: #2563eb;
+      color: #ffffff;
       border: none;
-      border-radius: 6px;
+      border-radius: 0.5rem;
       font-size: 1rem;
-      font-weight: bold;
+      font-weight: 600;
       cursor: pointer;
-      transition: background 0.2s;
+      transition: background-color 0.2s;
     }
 
     button[type="submit"]:hover {
-      background-color: #0052a3;
+      background-color: #1d4ed8;
     }
 
     footer {
       text-align: center;
-      padding: 2rem;
-      border-top: 1px solid #eaeaea;
-      color: #888;
-      font-size: 0.9rem;
+      padding: 3rem 1.5rem;
+      border-top: 1px solid #f3f4f6;
+      color: #9ca3af;
+      font-size: 0.875rem;
     }
 
-    /* Media Queries para Pantallas Móviles */
+    /* 4. Adaptación para celulares (Menú Hamburguesa) */
     @media (max-width: 768px) {
       .menu-toggle {
         display: block;
@@ -201,9 +246,9 @@
         top: 100%;
         left: 0;
         background-color: #ffffff;
-        padding: 1rem 2rem;
-        border-bottom: 1px solid #eaeaea;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        padding: 1.5rem 2rem;
+        border-bottom: 1px solid #e5e7eb;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
       }
 
       .nav-links.active {
@@ -211,64 +256,83 @@
       }
 
       .hero h1 {
-        font-size: 1.8rem;
+        font-size: 2.25rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Encabezado con Menú Hamburguesa -->
+  <!-- Encabezado con menú responsivo -->
   <header>
-    <div class="logo">OradorAI</div>
-    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
+    <a href="#" class="logo">OradorAI</a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
     <ul class="nav-links" id="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#video">Demo</a></li>
+      <li><a href="#demo">Demo</a></li>
+      <li><a href="#features">Features</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </header>
 
   <div class="container">
-    <!-- Hero Section -->
+    <!-- Hero principal -->
     <section id="about" class="hero">
       <h1>The future of trusted educational assessment</h1>
       <p>Unlock the true depth of learning. Assess with greater precision and align with your academic vision with OradorAI.</p>
     </section>
 
-    <!-- 2. Sección del Video Embebido -->
-    <section id="video" class="video-section">
+    <!-- 2. Video Embebido -->
+    <section id="demo" class="video-section">
       <div class="video-container">
-        <!-- Reemplaza el SRC con la URL embed de tu video (por ejemplo de YouTube o Vimeo) -->
-        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="OradorAI Video Demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- Reemplazar el src si se quiere cambiar el video por otro enlace de YouTube -->
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="OradorAI Video Presentation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </section>
 
-    <!-- 1. Formulario Configurado para Netlify -->
+    <!-- Características -->
+    <section id="features" class="features">
+      <div class="feature-card">
+        <h3>Precision Assessment</h3>
+        <p>Evaluate learning depth with advanced AI-driven diagnostics tailored for academic excellence.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Trusted Insights</h3>
+        <p>Gain transparent, verifiable results that reinforce academic integrity across all evaluations.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Seamless Integration</h3>
+        <p>Designed to align smoothly with your institutional workflows and existing digital tools.</p>
+      </div>
+    </section>
+
+    <!-- 1. Formulario integrado con Netlify -->
     <section id="contact" class="contact-section">
       <h2>Connect with OradorAI</h2>
-      <form name="contact" method="POST" data-netlify="true">
-        <!-- Campo oculto obligatorio para Netlify -->
-        <input type="hidden" name="form-name" value="contact" />
+      <p>Fill out the form below to get in touch with our team.</p>
+
+      <form name="contacto" method="POST" data-netlify="true">
+        <!-- Campo oculto requerido por Netlify -->
+        <input type="hidden" name="form-name" value="contacto" />
 
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" id="name" name="name" required placeholder="Your name" />
         </div>
 
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="email" name="email" required placeholder="cesar.alvarez@oradorai.com" />
         </div>
 
         <div class="form-group">
           <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" />
+          <input type="tel" id="phone" name="phone" placeholder="Optional" />
         </div>
 
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
+          <textarea id="message" name="message" required placeholder="How can we help you?"></textarea>
         </div>
 
         <button type="submit">Contact Us</button>
@@ -280,14 +344,16 @@
     <p>&copy; OradorAI. All rights reserved.</p>
   </footer>
 
-  <!-- 4. Script para activar el Menú Hamburguesa en Móvil -->
+  <!-- 4. JavaScript para activar el botón de hamburguesa -->
   <script>
     const menuToggle = document.getElementById('menu-toggle');
     const navLinks = document.getElementById('nav-links');
 
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    }
   </script>
 
 </body>
